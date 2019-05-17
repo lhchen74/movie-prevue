@@ -11,7 +11,7 @@ const sleep = time => new Promise(resolve => {
 
     const browser = await puppeteer.launch({
         args: ['--no-sandbox'],
-        dumpio: false
+        dumpio: false // Whether to pipe the browser process stdout and stderr into process.stdout and process.stderr. Defaults to false.
     })
 
     const page = await browser.newPage()
